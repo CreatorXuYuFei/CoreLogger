@@ -1,5 +1,4 @@
 ﻿using CoreLogger.Entiy;
-using LogService;
 
 namespace CoreLogger.Abstractions
 {

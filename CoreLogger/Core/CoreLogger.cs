@@ -3,7 +3,6 @@ using CoreLogger.Entiy;
 using CoreLogger.Extensions;
 using CoreLogger.Sink;
 using CoreLogger.Utils;
-using LogService;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.ObjectPool;
 using System.Text;
@@ -15,7 +14,7 @@ using System.Threading.Channels;
 
 namespace CoreLogger.Core
 {
-    
+
     internal sealed class CoreLog : IAsyncDisposable
     {
         private readonly LoggerOptions _options;

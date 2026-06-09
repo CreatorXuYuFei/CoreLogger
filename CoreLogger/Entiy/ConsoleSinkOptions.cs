@@ -1,5 +1,4 @@
 ﻿using CoreLogger.Enum;
-using LogService;
 using Microsoft.Extensions.Logging;
 
 namespace CoreLogger.Entiy

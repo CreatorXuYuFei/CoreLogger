@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CoreLogger.Entiy
+﻿namespace CoreLogger.Entiy
 {
     public class SensitiveMaskOptions
     {

@@ -1,17 +1,9 @@
-﻿using CoreLogger.Abstractions;
+﻿using CoreLogger.Core;
 using CoreLogger.Entiy;
-using CoreLogger.Enum;
 using CoreLogger.Extensions;
-using CoreLogger.Utils;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System.Collections.Concurrent;
-using System.IO.Compression;
-using System.Text;
-using System.Text.Json;
-using CoreLogger.Core;
 
-namespace LogService
+namespace CoreLogger
 {
     #region 静态调用入口
     public static class SysLogHelper

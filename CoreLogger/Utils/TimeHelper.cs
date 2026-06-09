@@ -1,5 +1,4 @@
 ﻿using CoreLogger.Enum;
-using LogService;
 
 namespace CoreLogger.Utils
 {

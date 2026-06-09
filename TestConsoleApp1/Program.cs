@@ -1,5 +1,5 @@
-﻿using CoreLogger.Enum;
-using LogService;
+﻿using CoreLogger;
+using CoreLogger.Enum;
 using Microsoft.Extensions.Logging;
 
 namespace TestConsoleApp1
