@@ -256,42 +256,47 @@ SysLogHelper.Error("控制台错误日志", new Exception("运行异常"));
 
 # 完整配置项说明
 1. 根配置 LoggerOptions
-配置字段	类型	默认值	说明
-GlobalMinLevel	LogLevel	Information	全局日志最低输出级别
-SampleRate	double	1.0	日志采样率（0~1），用于高流量削峰
-BatchSize	int	50	队列单次批量消费日志条数
-ChannelCapacity	int	1048576	异步队列最大容量
-FlushIntervalMs	int	1000	定时强制刷盘间隔（毫秒）
-TimestampType	TimestampType	Beijing	日志时间戳时区
+| 配置字段 | 类型 | 默认值 | 说明 |
+| ---- | ---- | ---- | ---- |
+| GlobalMinLevel | LogLevel | Information | 全局日志最低输出级别 |
+| SampleRate | double | 1.0 | 日志采样率（0~1），用于高流量削峰 |
+| BatchSize | int | 50 | 队列单次批量消费日志条数 |
+| ChannelCapacity | int | 1048576 | 异步队列最大容量 |
+| FlushIntervalMs | int | 1000 | 定时强制刷盘间隔（毫秒） |
+| TimestampType | TimestampType | Beijing | 日志时间戳时区 |
 
 2. 控制台配置 ConsoleSinkOptions
-配置字段	类型	默认值	说明
-Enabled	bool	true	是否开启控制台输出
-MinLevel	LogLevel	Debug	控制台独立日志级别
-Format	LogFormatType	Text	输出格式：纯文本 / JSON
+| 配置字段 | 类型 | 默认值 | 说明 |
+| ---- | ---- | ---- | ---- |
+| Enabled | bool | true | 是否开启控制台输出 |
+| MinLevel | LogLevel | Debug | 控制台独立日志级别 |
+| Format | LogFormatType | Text | 输出格式：纯文本 / JSON |
 
-4. 文件配置 FileSinkOptions
-配置字段	类型	默认值	说明
-Enabled	bool	true	是否开启文件日志输出
-MinLevel	LogLevel	Information	文件日志最低输出级别
-RootPath	string	logs	日志文件根目录
-MaxFileSizeMB	int	10	单日志文件最大容量 (MB)
-MaxBackupCount	int	30	最大备份文件数量
-RollingInterval	RollingInterval	Day	文件滚动周期：按分 / 小时 / 天
-EnableCompress	bool	true	旧备份文件是否开启 GZip 压缩
-FileName	string	log	日志主文件名
+3. 文件配置 FileSinkOptions
+| 配置字段 | 类型 | 默认值 | 说明 |
+| ---- | ---- | ---- | ---- |
+| Enabled | bool | true | 是否开启文件日志输出 |
+| MinLevel | LogLevel | Information | 文件日志最低输出级别 |
+| RootPath | string | logs | 日志文件根目录 |
+| MaxFileSizeMB | int | 10 | 单日志文件最大容量(MB) |
+| MaxBackupCount | int | 30 | 最大备份文件数量 |
+| RollingInterval | RollingInterval | Day | 文件滚动周期：按分/小时/天 |
+| EnableCompress | bool | true | 旧备份文件是否开启 GZip 压缩 |
+| FileName | string | log | 日志主文件名 |
 
-5. 脱敏配置 SensitiveMaskOptions
-配置字段	类型	默认值	说明
-Enabled	bool	true	是否开启敏感信息脱敏
-Rules	Dictionary<string,string>	内置通用规则	自定义正则脱敏规则
+4. 脱敏配置 SensitiveMaskOptions
+| 配置字段 | 类型 | 默认值 | 说明 |
+| ---- | ---- | ---- | ---- |
+| Enabled | bool | true | 是否开启敏感信息脱敏 |
+| Rules | Dictionary&lt;string,string&gt; | 内置通用规则 | 自定义正则脱敏规则 |
 
-6. 过滤配置 LogFilterOptions
-配置字段	类型	默认值	说明
-Enabled	bool	true	是否开启日志过滤
-IncludeModules	List<string>	空	模块白名单，仅输出指定模块日志
-ExcludeModules	List<string>	空	模块黑名单，屏蔽指定模块日志
-BlockKeywords	List<string>	空	屏蔽包含指定关键字的日志
+5. 过滤配置 LogFilterOptions
+| 配置字段 | 类型 | 默认值 | 说明 |
+| ---- | ---- | ---- | ---- |
+| Enabled | bool | true | 是否开启日志过滤 |
+| IncludeModules | List&lt;string&gt; | 空 | 模块白名单，仅输出指定模块日志 |
+| ExcludeModules | List&lt;string&gt; | 空 | 模块黑名单，屏蔽指定模块日志 |
+| BlockKeywords | List&lt;string&gt; | 空 | 屏蔽包含指定关键字的日志 |
 
 # ♻️ 资源释放说明
 1. DI 托管实例（推荐方式）
