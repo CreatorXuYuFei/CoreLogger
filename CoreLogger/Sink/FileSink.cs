@@ -116,7 +116,7 @@ namespace CoreLogger.Sink
 
         private FileMeta GetOrCreateFile(string path)
         {
-            if (_fileCache.TryGetValue(path, out var list) && list.Count > 0) return list[0];
+            if (_fileCache.TryGetValue(path, out var list) && list?.Count > 0) return list[0];
             var stream = new FileStream($"{path}.log", FileMode.Append, FileAccess.Write, FileShare.Read, 4096, true);
             var meta = new FileMeta { Writer = new StreamWriter(stream, _encoding) { AutoFlush = false }, FilePath = $"{path}.log", CurrentSize = stream.Length, LastAccessTime = DateTime.UtcNow };
             _fileCache.AddByKey(path, meta);

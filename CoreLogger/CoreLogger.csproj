@@ -2,6 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+	  
+	 <!-- ========== NuGet 包核心元数据 ========== -->
+    <PackageId>CoreLogger</PackageId>       <!-- 包唯一ID（NuGet 检索名称，全局唯一） -->
+    <Version>2.0.0</Version>                   <!-- 包版本号（语义化版本：主.次.修订） -->
+    <Authors>XuF</Authors>                    <!-- 作者 -->
+    <Company>富沛和科技有限公司</Company>
+    <Description>.NET8 通用工具类库</Description> <!-- 包描述 -->
+    <PackageTags>net8;utils;tool;core;logger</PackageTags>  <!-- 标签，便于检索 -->
+    <RepositoryUrl>https://gitee.com/xxx/xxx</RepositoryUrl> <!-- 源码地址 -->
+    
+    <!-- 可选：构建项目时自动生成 NuGet 包 -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild> 
+	  
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>

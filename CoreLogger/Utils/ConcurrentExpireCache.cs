@@ -98,7 +98,7 @@ namespace CoreLogger.Utils
         ///<param name="orderByFunc">排序规则（可选：如按时间倒序，默认不排序）</param>
         ///<param name="takeCount">获取数量（可选：默认全部）</param>
         ///<returns>筛选后的元素列表（线程安全副本）</returns>
-        public List<TValue> Get(TKey key, Func<TValue, bool> filterFunc = null, Func<IEnumerable<TValue>, IOrderedEnumerable<TValue>> orderByFunc = null, int takeCount = -1, bool IsDeepCopy = true)
+        public List<TValue> Get(TKey key, Func<TValue, bool>? filterFunc = null, Func<IEnumerable<TValue>, IOrderedEnumerable<TValue>>? orderByFunc = null, int takeCount = -1, bool IsDeepCopy = true)
         {
             ThrowIfDisposed();
             if (key == null) throw new ArgumentNullException(nameof(key));
@@ -136,7 +136,7 @@ namespace CoreLogger.Utils
         ///</summary>
         ///<param name="filterFunc">全局筛选条件（可选：为null时返回所有数据）</param>
         ///<returns>所有满足条件的数据列表（线程安全副本）</returns>
-        public List<TValue> GetAll(Func<TValue, bool> filterFunc = null, bool IsDeepCopy = true)
+        public List<TValue> GetAll(Func<TValue, bool>? filterFunc = null, bool IsDeepCopy = true)
         {
             ThrowIfDisposed();
 
@@ -225,7 +225,7 @@ namespace CoreLogger.Utils
         ///<param name="key">要清理的目标Key（如指定设备ID）</param>
         ///<param name="filterFunc">清理条件（必须：仅移除满足该条件的数据）</param>
         ///<returns>该Key下被清理的数据数量（-1表示Key不存在）</returns>
-        public int CleanupByKey(TKey key, Func<TValue, bool> filterFunc = null)
+        public int CleanupByKey(TKey key, Func<TValue, bool>? filterFunc = null)
         {
             ThrowIfDisposed();
             if (key == null) throw new ArgumentNullException(nameof(key), "清理的目标Key不能为null");
