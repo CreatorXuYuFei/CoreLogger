@@ -15,7 +15,7 @@ using System.Threading.Channels;
 namespace CoreLogger.Core
 {
 
-    internal sealed class CoreLog : IAsyncDisposable
+    public sealed class CoreLog : IAsyncDisposable
     {
         private readonly LoggerOptions _options;
         private readonly ObjectPool<StringBuilder> _sbPool = new DefaultObjectPool<StringBuilder>(new StringBuilderPooledObjectPolicy());

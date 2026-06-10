@@ -13,6 +13,7 @@ namespace CoreLogger.DI
         //防止重复释放
         private bool _disposed = false;
 
+        //手动注入到官方总线
         public ILogger CreateLogger(string categoryName)
         {
             return _loggers.GetOrAdd(categoryName, k => new NetLogger(_core, k));
