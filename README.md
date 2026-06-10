@@ -256,6 +256,7 @@ SysLogHelper.Error("控制台错误日志", new Exception("运行异常"));
 
 # 完整配置项说明
 1. 根配置 LoggerOptions
+
 | 配置字段 | 类型 | 默认值 | 说明 |
 | ---- | ---- | ---- | ---- |
 | GlobalMinLevel | LogLevel | Information | 全局日志最低输出级别 |
@@ -266,6 +267,7 @@ SysLogHelper.Error("控制台错误日志", new Exception("运行异常"));
 | TimestampType | TimestampType | Beijing | 日志时间戳时区 |
 
 2. 控制台配置 ConsoleSinkOptions
+
 | 配置字段 | 类型 | 默认值 | 说明 |
 | ---- | ---- | ---- | ---- |
 | Enabled | bool | true | 是否开启控制台输出 |
@@ -273,6 +275,7 @@ SysLogHelper.Error("控制台错误日志", new Exception("运行异常"));
 | Format | LogFormatType | Text | 输出格式：纯文本 / JSON |
 
 3. 文件配置 FileSinkOptions
+
 | 配置字段 | 类型 | 默认值 | 说明 |
 | ---- | ---- | ---- | ---- |
 | Enabled | bool | true | 是否开启文件日志输出 |
@@ -285,12 +288,14 @@ SysLogHelper.Error("控制台错误日志", new Exception("运行异常"));
 | FileName | string | log | 日志主文件名 |
 
 4. 脱敏配置 SensitiveMaskOptions
+
 | 配置字段 | 类型 | 默认值 | 说明 |
 | ---- | ---- | ---- | ---- |
 | Enabled | bool | true | 是否开启敏感信息脱敏 |
 | Rules | Dictionary&lt;string,string&gt; | 内置通用规则 | 自定义正则脱敏规则 |
 
 5. 过滤配置 LogFilterOptions
+
 | 配置字段 | 类型 | 默认值 | 说明 |
 | ---- | ---- | ---- | ---- |
 | Enabled | bool | true | 是否开启日志过滤 |
